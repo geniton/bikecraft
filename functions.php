@@ -12,10 +12,16 @@ remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 
+require_once( get_template_directory() . '/acf_groups/acf.php');
+require_once( get_template_directory() . '/inc/quote.php');
+
+define( 'ACF_LITE', false );
+
 function my_custom_sizes(){
   add_image_size('large', 1400, 100, true);
   add_image_size('medium', 768, 100, true);
 }
+
 add_action('after_setup_theme', 'my_custom_sizes');
 
 
@@ -71,11 +77,14 @@ function bikcraft_scripts() {
 	wp_register_script( 'plugins-script', get_template_directory_uri() . '/js/plugins.js', array( 'jquery' ), false, true );
 	// Registra o Script Principal, com dependência do jquery e plugins, sem especificar versão e no footer do site
 	wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'plugins-script' ), false, true );
+	// Registrando app.js
+	wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array( ), false, true );
 	// Registrando modernaize
 	wp_register_script( 'modernize', get_template_directory_uri() . '/js/libs/modernizr.custom.45655.js', array(), "45655", false );
 	// Coloca script no site
 	wp_enqueue_script( 'main-script' );
 	wp_enqueue_script( 'modernize' );
+	wp_enqueue_script( 'app' );
 }
 
 add_action( 'wp_enqueue_scripts', 'bikcraft_scripts' );

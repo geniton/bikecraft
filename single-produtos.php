@@ -17,9 +17,11 @@ get_header();
         <?php if(have_rows('caracteristicas')): while(have_rows('caracteristicas')) : the_row(); ?>
           <?php the_sub_field('caracteristicas_text'); ?>
         <?php endwhile; else : endif; ?>
+				<?php wp_reset_query(); ?>
       </div>
 			</div>
 		</section>
+		<?php the_content(); ?>
 
 		<section class="orcamento">
 			<div class="container">
