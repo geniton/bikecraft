@@ -4,6 +4,8 @@ get_header();
 
 $hero = get_field('banner');
 
+// Home
+
 ?>
 
 <?php
@@ -80,7 +82,7 @@ $the_post = new WP_Query ( $args_post );
 
 			<div class="call">
 				<p><?php the_field('chamada_produtos'); ?></p>
-				<a href="/bikecraft/produtos/" class="btn btn-preto">Produtos</a>
+				<a href="/bikecraft/produtos/" class="btn btn-preto">Produtoooos</a>
 			</div>
 
 		</section>
