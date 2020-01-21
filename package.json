@@ -1,0 +1,22 @@
+{
+  "name": "bikecraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geniton/bikecraft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geniton/bikecraft/issues"
+  },
+  "homepage": "https://github.com/geniton/bikecraft#readme",
+  "dependencies": {
+    "flickity": "^2.2.1"
+  }
+}

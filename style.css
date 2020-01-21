@@ -14,6 +14,7 @@ Version: 1.0
 @import 'css/produtos.css';
 @import 'css/portfolio.css';
 @import 'css/contato.css';
+@import 'css/home.css';
 
 /* Estilos Gerais */
 
@@ -283,6 +284,7 @@ img {
 	width: 100%;
 	background: #000;
 	padding: 40px 0;
+	margin-bottom: 50px;
 }
 
 .portfolio .subtitulo {
@@ -423,6 +425,19 @@ img {
 	width: 100%;
 	background: #fec63e;
 	padding: 20px 0;
+}
+.copy .container{
+	display: flex;
+}
+
+@media(min-width:768px){
+	.copy .footer__links{
+		display: flex;
+	}
+
+	.copy .footer__links .menu-item:not(:last-child){
+		margin-right: 10px;
+	}
 }
 
 /*Animações*/

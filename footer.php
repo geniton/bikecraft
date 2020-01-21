@@ -1,10 +1,6 @@
-		<div class="quebra">
-			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
-			</blockquote>
-		</div>
-
+		<?php 
+			dynamic_sidebar('antes-rodape');
+		?>
 		<footer>
 			<div class="footer">
 				<div class="container">
@@ -38,6 +34,16 @@
 			<div class="copy">
 				<div class="container">
 					<p class="grid-16">Bikcraft 2015 - Alguns direitos reservados.</p>
+					<?php if ( has_nav_menu( 'menu-footer' ) ): 
+                wp_nav_menu( array( 
+                    'menu'  => 'menu-footer',
+                    'theme_location' => 'menu-footer',
+                    'container' => 'ul',
+                    'depth'  => 0,
+										'menu_class' => "footer__links",
+										'walker' => new IBenic_Walker()
+                ) );
+            endif; ?>
 				</div>
 			</div>
 		</footer>

@@ -61,6 +61,12 @@
 .header img {
 	margin: 0 auto 10px auto;
 }
+	
+#menu-principal{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
 
 .header_menu {
 	text-align: center;
@@ -68,6 +74,7 @@
 
 .header_menu ul li {
 	margin: 5px;
+	margin-left: 0;
 }
 
 .header_menu ul li a {
@@ -93,7 +100,6 @@
 
 .introducao {
 	margin-top: 0px;
-	padding-top: 40px;
 	background: url("../img/bg-mobile.jpg") no-repeat center;
 	background-size: cover;
 }
