@@ -5,7 +5,7 @@ get_header();
 $hero = get_field('banner');
 
 
-///ashuahsuas
+///removir
 ?>
 
 <?php
